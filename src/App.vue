@@ -1,24 +1,17 @@
 <template>
   <div id="app">
-    {{user }}
-    {{'firstName=' +firstName}}
-    <!--    <input type="text" v-model="user.username"/>-->
-    <input type="text" :value="user.username" @input="user.username = $event.target.value" />
-    <button @click="user.username = 'wslbtn'"  >username = wslbtn</button>
 
-<!--    <my-input :value="firstName" @input="firstName = $event" />-->
-    <my-input v-model="firstName" />
-
+      <login></login>
 
   </div>
 </template>
 
 <script>
-import MyInput from "./components/MyInput";
+import Login from './components/Login.vue'
 
 export default {
   components: {
-    MyInput
+    Login,
   },
   data (){
     return {

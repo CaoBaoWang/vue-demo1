@@ -1,8 +1,9 @@
 import Vue from 'vue/dist/vue.js'
-import 'ant-design-vue/dist/antd.css';
 
 import Antd from 'ant-design-vue';
 import App from './App.vue'
+import 'ant-design-vue/dist/antd.css';
+
 Vue.config.productionTip = false
 
 Vue.use(Antd)
