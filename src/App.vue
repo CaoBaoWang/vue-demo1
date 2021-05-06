@@ -1,18 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    {{user }}
+    {{'firstName=' +firstName}}
+    <!--    <input type="text" v-model="user.username"/>-->
+    <input type="text" :value="user.username" @input="user.username = $event.target.value" />
+    <button @click="user.username = 'wslbtn'"  >username = wslbtn</button>
+
+<!--    <my-input :value="firstName" @input="firstName = $event" />-->
+    <my-input v-model="firstName" />
+
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MyInput from "./components/MyInput";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
+    MyInput
+  },
+  data (){
+    return {
+      firstName : 'w',
+      user :{
+        username:'wsl'
+      }
+    }
+  },
+
+  name: 'App',
+
 }
 </script>
 
